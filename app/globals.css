@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-cormorant: 'Cormorant Garamond';
+    --font-dm-sans: 'DM Sans';
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans;
+    min-height: 100vh;
+  }
+
+  /* Typography scale */
+  h1, h2, h3 {
+    @apply font-serif;
+    font-feature-settings: "liga", "kern";
+  }
+
+  /* Remove default button styles */
+  button {
+    @apply font-sans;
+  }
+
+  /* Focus ring */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-gold-400 ring-offset-2 ring-offset-cream;
+  }
+}
+
+@layer components {
+  /* Gold divider */
+  .divider-gold {
+    @apply border-gold-300;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply bg-cream-dark animate-shimmer rounded-lg;
+  }
+
+  /* Premium card */
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-cream-dark;
+  }
+
+  /* Subtle section header */
+  .section-label {
+    @apply text-xs font-sans tracking-widest uppercase text-stone-500;
+  }
+}
+
+@layer utilities {
+  /* Text gradient — gold */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #C9A96E 0%, #B8923A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Blurred glass card */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/60;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cream-dark;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold-400;
+}
