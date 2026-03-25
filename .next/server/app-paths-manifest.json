@@ -1,8 +1,11 @@
 {
-  "/page": "app/page.js",
   "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/page": "app/page.js",
   "/api/download-zip/route": "app/api/download-zip/route.js",
-  "/(client)/media/page": "app/(client)/media/page.js",
+  "/(admin)/admin/dashboard/page": "app/(admin)/admin/dashboard/page.js",
+  "/(admin)/admin/clients/page": "app/(admin)/admin/clients/page.js",
+  "/(admin)/admin/clients/[clientId]/page": "app/(admin)/admin/clients/[clientId]/page.js",
+  "/(admin)/admin/clients/new/page": "app/(admin)/admin/clients/new/page.js",
   "/(client)/dashboard/page": "app/(client)/dashboard/page.js",
-  "/(admin)/admin/dashboard/page": "app/(admin)/admin/dashboard/page.js"
+  "/(client)/media/page": "app/(client)/media/page.js"
 }
